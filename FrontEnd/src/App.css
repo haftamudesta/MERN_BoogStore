@@ -1,0 +1,51 @@
+#body {
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.main_container {
+  margin-left: 10%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 2px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+th {
+  background-color: #b0adad;
+}
+
+.create_book {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 20%;
+  gap: 24px;
+  border: 2px solid  limegreen;
+  padding: 16px;
+  align-items: center;
+}
+
+.input_title {
+  margin-left: 56px;
+}
+
+.input_author {
+  margin-left: 42px;
+}
+
+.input_year {
+  margin-left: 8px;
+}
