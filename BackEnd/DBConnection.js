@@ -1,14 +1,13 @@
-const mongoose=require('mongoose')
-const dotenv=require('dotenv')
-dotenv.config();
-const DBConnection=() =>{
-    mongoose.connect('mongodb+srv://Admin:lIGQBPqfXyvwKX2R@cluster0.zvxxp4g.mongodb.net/mongoDB?retryWrites=true&w=majority',{
-        useNewUrlParser:true
-    }).then(()=>{
-        console.log("connection established");
-    }).catch((err)=>{
-        console.log(err);
-    })
-}
+const mongoose = require('mongoose');
 
-module.exports= DBConnection;
+const dotenv = require('dotenv');
+
+dotenv.config({ path: '../config.env' });
+const DBConnection = () => {
+  mongoose.connect(process.env.CONN_STR).then(() => {
+    console.log('connection established');
+  }).catch((err) => {
+    console.log(err);
+  });
+};
+module.exports = DBConnection;
