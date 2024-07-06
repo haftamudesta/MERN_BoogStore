@@ -26,7 +26,7 @@ tr:nth-child(even) {
 th {
   background-color: #b0adad;
 }
-
+ 
 .create_book {
   display: flex;
   flex-direction: column;
