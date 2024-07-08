@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import {Routes,Route} from "react-router-dom"
 import DeleteBook from '../pages/DeleteBook'
@@ -6,10 +5,11 @@ import Home from '../pages/Home';
 import CreateBook from '../pages/CreateBook';
 import EditBook from '../pages/EditBook';
 import ShowBook from '../pages/ShowBook';
+import NavBar from '../components/NavBar';
 function App() {
   return (
     <div className="main">
-  <h1>Welcome to My Bookstore</h1>
+    <NavBar/>
     <Routes>
     <Route path='/' element={<Home />}/>
     <Route path='/books/create' element={<CreateBook />}/>

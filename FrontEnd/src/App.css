@@ -49,3 +49,64 @@ th {
 .input_year {
   margin-left: 8px;
 }
+
+.actions {
+  display: flex;
+  gap: 32px;
+}
+
+.veiw_book {
+  display: flex;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(216, 205, 205);
+  align-items: center;
+  margin: 0 0 24px 0 ;
+}
+
+.book_app {
+  margin-left: 24px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.add_book {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+}
+
+p {
+  text-decoration: none;
+  
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #ddd;
+  border-top-color: aqua;
+  border-radius: 50%;
+  animation: loading_behaviour 0.75s ease infinite;
+}
+
+@keyframes loading_behaviour {
+  from { transform: rotate(0turn) }
+  to { transform: rotate(1turn) } 
+}

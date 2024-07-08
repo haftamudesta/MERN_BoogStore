@@ -4,7 +4,7 @@ import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
 import {AiOutlineEdit} from "react-icons/ai";
 import {BsInfoCircle} from "react-icons/bs";
-import {MdOutlineAddBox,MdOutlineDelete} from "react-icons/md"
+import {MdOutlineDelete} from "react-icons/md"
 
 const Home = () => {
     const [books,setBooks]=useState([]);
@@ -26,10 +26,6 @@ const Home = () => {
     <div className='main_container'>
         <div className='book_list'>
         <h1>Book List</h1>
-        <Link to='/books/create'>
-            <MdOutlineAddBox />
-            <p>Add Book</p>
-        </Link>
     </div>
     {loading?(
         <Spinner />
@@ -52,10 +48,13 @@ const Home = () => {
                     <td  className='book_title'>{book.author}</td>
                     <td  className='book_title'>{book.publishYear}</td>
                     <td>
-                        <div>
+                        <div className='actions'>
+                            <div className='veiw_book'>
                             <Link to={`/books/details/${book._id}`}>
                             <BsInfoCircle />
+                            <p>View</p>
                             </Link>
+                            </div>
                             <Link to={`/books/edit/${book._id}`}>
                                <AiOutlineEdit /> 
                             </Link>
